@@ -1,35 +1,103 @@
 body {
-  font-family: 'Roboto', sans-serif;
   color: #333333;
+  font-family: 'Roboto', sans-serif;
 }
 
+
+h1, 
 h2 {
+  margin: 0 0 1rem 0;
+  text-align: center;
+}
+
+h1 {
+  color: #6E743F;
+}
+h2 {
+  color: #93743B;
   display: inline-block;
 }
 
+h2 ~ span {
+  color: #E06287;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-left: 4px;
+  position: relative;
+  top: 4px;
+}
+
 .content {
-  width: 100%;
-  max-width: 620px;
   margin: 0 auto;
+  max-width: 650px;
+  width: 100%;
+}
+
+.score, .timer {
+  text-align: center;
 }
 
 .square {
-  width: 200px;
-  height: 200px;
+  background-color: #98E690;
+  background-position-y: 175px;
+  background-repeat: no-repeat;
+  border-color: #6E743F;
   border-style: solid;
-  border-color: black;
+  height: 200px;
+  margin: 0 4px 4px 0;
+  position: relative;
+  transition: all ease-in-out 150ms;
+  width: 200px;
+}
+
+.square::after,
+.square::before {
+  bottom: 1px;
+  content: '';
+  background-color: #202020;
+  border-radius: 100%;
+  display: block;
+  height: 40px;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+  width: 95%;
+}
+
+.square::before {
+  bottom: 8px;
+  box-shadow: 0px -1px 3px rgba(0,0,0,0.25);
+  height: 22px;
+  z-index: 1;
+}
+
+.square::after {
+  z-index: -1;
+}
+
+.square span {
+  background-color: #98E690;
+  bottom: 0;
+  height: 20px;
+  display: block;
+  position: absolute;
+  width: 100%;
+  z-index: 0;
 }
 
 .grid {
+  align-content: center;
   display: flex;
   flex-flow: row wrap;
+  height: auto;
   justify-content: center;
-  align-content: center;
-  width: 618px;
-  height: 618px;
+  max-width: 640px;
+  width: 100%;
 }
 
 .mole {
-  background-image: url('../img/mole.jpg');
+  background-image: url('../img/mole.png');
+  background-position-y: -8px;
   background-size: cover;
 }
