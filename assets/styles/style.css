@@ -1,0 +1,35 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #333333;
+}
+
+h2 {
+  display: inline-block;
+}
+
+.content {
+  width: 100%;
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.square {
+  width: 200px;
+  height: 200px;
+  border-style: solid;
+  border-color: black;
+}
+
+.grid {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
+  width: 618px;
+  height: 618px;
+}
+
+.mole {
+  background-image: url('../img/mole.jpg');
+  background-size: cover;
+}
